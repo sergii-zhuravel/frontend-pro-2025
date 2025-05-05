@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-2">
+          <!-- Menu -->
+          <div
+            class="btn-group-vertical"
+            role="group"
+            aria-label="Vertical button group"
+          >
+            <button id="menu-iphone" type="button" class="btn btn-primary">
+              iPhone
+            </button>
+            <button id="menu-samsung" type="button" class="btn btn-primary">
+              Samsung
+            </button>
+            <button id="menu-orders" type="button" class="btn btn-success">
+              My orders
+            </button>
+          </div>
+        </div>
+        <div class="col-10">
+          <!-- Main section -->
+          <div class="container d-none" id="container-iphone">
+            <div class="card" style="width: 18rem">
+              <img
+                src="https://www.apple.com/v/iphone/home/cb/images/overview/select/iphone_16pro__erw9alves2qa_xlarge_2x.png"
+                class="card-img-top"
+              />
+              <div class="card-body">
+                <h5 class="card-title">iPhone 16 PRo</h5>
+                <p class="card-text">iPhone 16 PRo description</p>
+                <a href="#" class="btn btn-primary" id="iphone-16pro"
+                  >Add to Cart</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="container d-none" id="container-samsung">
+            <div class="card" style="width: 18rem">
+              <img
+                src="https://images.samsung.com/is/image/samsung/p6pim/ua/2501/gallery/ua-galaxy-s25-s938-sm-s938bzbgeuc-thumb-544739205?$216_216_PNG$"
+                class="card-img-top"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Samsung S25 Ultra</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary">Add to card</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="container d-none" id="container-orders">Orders</div>
+        </div>
+      </div>
+    </div>
+
+    <template id="order-template">
+      <div id="model"></div>
+      <div id="price"></div>
+      <button class="btn btn-success">Send order</button>
+    </template>
+  </body>
+</html>
