@@ -4,29 +4,17 @@ class Button extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      title: this.props.title,
-      isDisabled: false,
-    };
-
-    this.changeTitle = this.changeTitle.bind(this);
+    this.handleDeleteClick = this.handleDeleteClick.bind(this);
   }
 
-  changeTitle() {
-    this.setState({
-      title: "New title",
-      isDisabled: true,
-    });
+  handleDeleteClick() {
+    this.props.onClick(this.props.id);
   }
 
   render() {
     return (
-      <button
-        disabled={this.state.isDisabled}
-        className={this.props.className}
-        onClick={this.changeTitle}
-      >
-        {this.state.title}
+      <button className={this.props.className} onClick={this.handleDeleteClick}>
+        {this.props.title}
       </button>
     );
   }
