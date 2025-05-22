@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
+import ThemeContext from "../../context/ThemeContext";
 
 export default function Button({ title }) {
-  return (
-    <button style={{ backgroundColor: "black", color: "white" }}>
-      {title.toUpperCase()}
-    </button>
-  );
+  const theme = useContext(ThemeContext);
+
+  const style =
+    theme === "light"
+      ? { backgroundColor: "white", color: "black" }
+      : { backgroundColor: "black", color: "white" };
+
+  return <button style={style}>{title.toUpperCase()}</button>;
 }
