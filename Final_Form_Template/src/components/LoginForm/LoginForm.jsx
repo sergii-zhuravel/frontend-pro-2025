@@ -13,11 +13,11 @@ const LoginForm = (props) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <Field component={Input} validate={required} label="Email" name="email" />
+      <Field component={Input} label="Email" name="email" />
       <br />
       <Field
         component={Input}
-        validate={composeValidators(required, minLength)}
+        // validate={composeValidators(required, minLength)}
         label="Password"
         name="password"
       />
